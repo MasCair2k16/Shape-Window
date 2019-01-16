@@ -205,8 +205,11 @@ public class shapes implements MouseMotionListener, ActionListener, MouseListene
 			
 			Scanner scnr = null;
 			
+			final String dir = System.getProperty("user.dir");
+			
+			
 			try {	// my pathway to file
-				scnr = new Scanner(new File("C:/Users/mcaird22/Pictures/src/shapes.csv"));
+				scnr = new Scanner(new File(dir + "/src/shapes.csv"));
 			} catch (FileNotFoundException e1) {
 				textArea.setText("Error finding the file.\n Please Check your file location");
 				e1.printStackTrace();
